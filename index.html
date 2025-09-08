@@ -3,88 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single-File Background Video</title>
+    <title>Background Video</title>
     <style>
-        /* CSS for the page layout and video container */
+        /* CSS to make the video a full-screen background */
         body {
             margin: 0;
-            overflow: hidden; /* Prevents scrollbars on the body */
+            overflow: hidden;
             font-family: Arial, sans-serif;
             color: white;
             text-shadow: 2px 2px 4px #000000;
         }
 
-        /* Video container that holds the iframe */
         .video-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Puts the video behind other content */
+            z-index: -1;
         }
 
-        /* Iframe styling to make it a full-screen, centered background */
         .video-background iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); /* Centers the iframe perfectly */
+            transform: translate(-50%, -50%);
             min-width: 100%;
             min-height: 100%;
-            pointer-events: none; /* Prevents users from interacting with the video */
+            pointer-events: none;
         }
 
-        /* Styling for content placed on top of the video */
         .content {
             position: relative;
-            z-index: 1; /* Ensures content is on top */
+            z-index: 1;
             text-align: center;
-            padding-top: 20vh; /* Adjust vertical positioning */
+            padding-top: 20vh;
         }
-        
+
         .content h1 {
             font-size: 3em;
         }
     </style>
-    <script>
-        // This JavaScript will automatically resize the iframe to fit the screen
-        function resizeIframe() {
-            const iframe = document.querySelector('.video-background iframe');
-            const aspectRatio = 16 / 9; // YouTube's standard aspect ratio
-            const screenWidth = window.innerWidth;
-            const screenHeight = window.innerHeight;
-            
-            // Adjust the video dimensions to cover the screen while maintaining aspect ratio
-            if (screenWidth / screenHeight > aspectRatio) {
-                iframe.style.width = screenWidth + 'px';
-                iframe.style.height = (screenWidth / aspectRatio) + 'px';
-            } else {
-                iframe.style.height = screenHeight + 'px';
-                iframe.style.width = (screenHeight * aspectRatio) + 'px';
-            }
-        }
-        
-        // Listen for window resize events to keep the video scaled correctly
-        window.addEventListener('resize', resizeIframe);
-        
-        // Initial call to set the correct size on page load
-        document.addEventListener('DOMContentLoaded', resizeIframe);
-    </script>
 </head>
 <body>
 
     <div class="video-background">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&disablekb=1&modestbranding=1" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen>
+        <iframe 
+            src="https://www.youtube.com/embed/AnstAd2bUh8?autoplay=1&mute=1&loop=1&playlist=AnstAd2bUh8&controls=0&disablekb=1&modestbranding=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
         </iframe>
     </div>
 
     <div class="content">
-        <h1>Background Video Demo</h1>
-        <p>This is all HTML, CSS, and JS in one file.</p>
+        <h1>Welcome!</h1>
+        <p>This page has a full-screen background video.</p>
     </div>
 
 </body>
