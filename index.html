@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi360 Video Player</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-2xl text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Krishi360 Video Player</h1>
+        
+        <p class="text-gray-700 mb-6">
+            Welcome to the official video player for Krishi360. This video showcases our innovative approach to agriculture, focusing on sustainable practices and technology-driven solutions to empower farmers and ensure a greener future.
+        </p>
+
+        <!-- Video element with controls, autoplay, and loop -->
+        <div class="relative w-full rounded-lg overflow-hidden mb-6">
+            <!-- Ensure the path is correct for your local machine -->
+            <video id="krishiVideo" class="w-full h-auto" controls autoplay loop>
+                <source src="C:\Users\91984\Downloads\krishi360.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class="text-sm text-gray-500 mb-8">
+            This website is set up to play the video directly from your local computer. To host this online, you will need to upload the video file to the same folder as this HTML file and change the video source path to just `krishi360.mp4`.
+        </p>
+
+        <!-- New content sections -->
+        <section class="text-left mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">About Krishi360</h2>
+            <p class="text-gray-700">
+                Krishi360 is a non-profit initiative dedicated to revolutionizing the agricultural sector through education and technology. Our mission is to provide small-scale farmers with the knowledge and tools they need to improve crop yields, reduce environmental impact, and achieve economic stability. We believe in a holistic, 360-degree approach that covers everything from soil health to market access.
+            </p>
+        </section>
+
+        <section class="text-left mb-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-2">Our Vision</h2>
+            <p class="text-gray-700">
+                Our vision is to build a global network of resilient, self-sufficient farms. By leveraging data analytics, precision farming techniques, and community-driven knowledge sharing, we aim to create a sustainable and equitable food system for generations to come. Join us on our journey to cultivate a better world, one farm at a time.
+            </p>
+        </section>
+        
+        <footer class="text-gray-500 text-sm mt-8">
+            &copy; 2025 Krishi360. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
